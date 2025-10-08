@@ -32,12 +32,49 @@ export default function MyBlog () { {/*Inseriamo tutti i campi che vogliamo nel 
             </div>
             <div>
                 <form onSubmit={submitForm}>
-                    <input
-                        type="text"
-                        name="author"
-                        value={form.value}
-                        onChange={changeForm}
-                    />
+                    <div>
+                        <label>Autore del post</label>
+                        <input
+                            className=""
+                            type="text"
+                            name="author"
+                            value={form.value}
+                            onChange={changeForm}
+                        />
+                    </div>
+                    <div>
+                        <label>Titolo del post</label>
+                        <input
+                            className=""
+                            type="text"
+                            name="title"
+                            value={form.title}
+                            onChange={changeForm}
+                        />
+                    </div>
+                    <div>
+                        <label>Inserisci il testo</label>
+                        <textarea
+                            className=""
+                            type="text"
+                            name="body"
+                            value={form.body}
+                            onChange={changeForm}
+                        />
+                    </div>
+                    <div>
+                        <label>Rendi il post pubblico</label>
+                        <input
+                            className=""
+                            type="checkbox"
+                            name="public"
+                            value={form.public}
+                            onChange={changeForm}
+                        />
+                    </div>
+                    <div>
+                        <button type="submit">Pubblica</button>
+                    </div>
                 </form>
             </div>
         </>
