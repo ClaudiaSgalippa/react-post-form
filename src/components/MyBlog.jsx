@@ -25,9 +25,21 @@ export default function MyBlog () { {/*Inseriamo tutti i campi che vogliamo nel 
         .catch (error => console.log (error))
     }; {/*Se la chiamata va a buon fine, stampiamo il risultato del server su console. Al contrario, stamperà un errore*/}
 
-    
-
     return (
-
+        <>
+            <div>
+                <h1>Creazione di un nuovo post</h1>
+            </div>
+            <div>
+                <form onSubmit={submitForm}>
+                    <input
+                        type="text"
+                        name="author"
+                        value={form.value}
+                        onChange={changeForm}
+                    />
+                </form>
+            </div>
+        </>
     )
 }
